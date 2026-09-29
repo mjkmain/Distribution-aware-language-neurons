@@ -80,7 +80,7 @@ def run_pass2(model, tokenizer, languages, *, target_tokens, max_length, n_bins,
 
     # asymmetric range: SiLU has a hard left floor but a heavy right tail
     bin_lo = torch.maximum(mean - 3.0 * std, torch.full_like(mean, SILU_FLOOR_PAD))
-    bin_hi = mean + 6.0 * std
+    bin_hi = mean + 3.0 * std
     flat = (bin_hi - bin_lo) < 1e-3
     if flat.any():
         bin_lo = torch.where(flat, mean - 0.05, bin_lo)
