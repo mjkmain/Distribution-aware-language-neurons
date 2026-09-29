@@ -1,6 +1,6 @@
 # Distribution-aware Language Neuron Identification
 
-Code for *Distribution-aware Language Neuron Identification in Multilingual Large Language Models*.
+Code for *Distribution-aware Language Neuron Identification in Multilingual Large Language Models*, EMNLP 2026.
 
 DLN (Distribution-aware Language Neuron) selection identifies language neurons in GLU feed-forward blocks from the **full per-language activation distributions**: each neuron's pairwise overlap-coefficient matrix over languages is bipartitioned by single-linkage clustering (K = 2), and the neuron is selected when its maximum between-cluster overlap falls below a percentile threshold τ. Neurons with a singleton cluster are **single-language neurons (SLNs)**; larger clusters are **multi-language neurons (MLNs)**.
 
