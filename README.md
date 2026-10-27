@@ -72,3 +72,30 @@ src/
 ├── eval/        mean-patch intervention, perplexity, selectivity experiment
 └── figures/     ΔNLL heatmap rendering
 ```
+
+
+## Citation
+```
+@inproceedings{kim-etal-2026-distribution,
+    title = "Distribution-aware Language Neuron Identification in Multilingual Large Language Models",
+    author = "Kim, Minjun  and
+      Won, Inho  and
+      Yuk, Junghun  and
+      Kim, Dongyeon  and
+      Kim, Jihyo  and
+      Lim, KyungTae",
+    editor = "Lee, Hung-Yi  and
+      Dev, Sunipa  and
+      Li, Jessy  and
+      Elliott, Desmond",
+    booktitle = "Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing",
+    month = oct,
+    year = "2026",
+    address = "Budapest, Hungary",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2026.emnlp-main.1150/",
+    pages = "26366--26393",
+    ISBN = "979-8-89176-459-0",
+    abstract = "Multilingual large language models (mLLMs) contain a small fraction of feed-forward neurons that are sensitive to particular languages, commonly termed language-specific neurons. Existing work measures language specificity using the entropy of each neuron{'}s language-wise probabilities of being active, where a neuron is considered active when its activation value is positive. However, this approach may not fully capture the multilingual nature of mLLMs, where language representations are distributional and mutually related. We propose Distribution-aware Language Neuron selection, which leverages pairwise relationships between per-language activation distributions over the full activation range, including negative values. Specifically, we quantify each neuron{'}s language specificity by clustering languages using pairwise overlap coefficients between their activation distributions. Across two mLLMs and two held-out corpora, our identifier more effectively isolates language-specific causal effects, yielding up to 4.9 times higher on-target language damage per neuron while preserving off-target language performance."
+}
+```
